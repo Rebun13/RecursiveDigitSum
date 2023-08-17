@@ -21,14 +21,12 @@ int superDigitAlt(string n, int k) {
     for(int i = 0; i < k; i++) {
         kn += n;
     }
-    cout << "Original: " << kn << endl;
     while(kn.size() > 1) {
         long res = 0;
         for(int i = 0; i < kn.size(); i++) {
             res += kn[i] - '0';
         }
         kn = to_string(res);
-        cout << "Nuevo -> " << kn << endl;
     }
     return stoi(kn);
 }
@@ -41,9 +39,7 @@ int superDigit(string n, int k) {
         }
         n = to_string(res  * k);
         k = 1;
-        cout << "Nuevo -> " << n << endl;
     }
-    cout << "Original: " << n << endl;
     return stoi(n);
 }
 
